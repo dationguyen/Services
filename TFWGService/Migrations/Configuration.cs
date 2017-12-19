@@ -1,5 +1,6 @@
 namespace TFWGService.Migrations
 {
+    using Microsoft.Azure.Mobile.Server.Tables;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -10,6 +11,7 @@ namespace TFWGService.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            SetSqlGenerator("System.Data.SqlClient",new EntityTableSqlGenerator());
         }
 
         protected override void Seed(TFWGService.Models.TFWGContext context)

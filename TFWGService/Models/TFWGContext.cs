@@ -22,6 +22,7 @@ namespace TFWGService.Models
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Session> Sessions { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
